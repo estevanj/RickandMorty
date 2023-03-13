@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "coverage": "nyc --reporter=text-summary mocha ./src/**/*.spec.js -t 10000  ",
+    "coverage-html": "nyc --reporter=html  mocha ./src/**/*.spec.js ./src/**/**/*.spec.js  -t 10000  ",
+    "coverage-table": "nyc mocha ./src/**/*.spec.js ./src/**/**/*.spec.js  -t 10000  "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0",
+    "mockery": "^2.1.0",
+    "nodemon": "^2.0.21",
+    "nyc": "^15.1.0",
+    "sinon": "^15.0.1"
+  }
+}
